@@ -1,0 +1,17 @@
+button {
+    height: 30px;
+    width: 100px;
+}
+
+table {
+    color: black;
+    border-spacing: 0;
+
+}
+
+.cell {
+    margin: 0;
+    height: 30px;
+    width: 30px;
+    border: 1px;
+}
