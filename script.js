@@ -11,12 +11,25 @@ function CreateGrid() {
         grid.appendChild(row);
 
         for (let j = 0; j < heightCount; j++) {
-            let column = document.createElement('td')
-            column.textContent = "aa"
-            column.classList.add('cell')
-            row.appendChild(column);
+
+            let cX = i;
+            let cY = j;
+
+            let cell = document.createElement('td')
+
+            cell.classList.add('cell', 'grass')
+
+            cell.addEventListener('click', CellOnClick);
+
+            row.appendChild(cell);
         }
     }
+}
+
+
+function CellOnClick()
+{
+    console.log()
 }
 
 gridBtn.addEventListener('click', CreateGrid)
