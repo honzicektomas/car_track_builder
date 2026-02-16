@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Track Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <button id="btn-grid" class="btn">Create Grid</button>
+<div id="menu-screen" class="screen">
+    <h1>Car Track Builder</h1>
+    <div class="controls">
+        <button id="btn-new">Nová mapa</button>
+        <div class="load-area">
+            <select id="select-map">
+                <option value="" disabled selected>Vyber uloženou mapu</option>
+            </select>
+            <button id="btn-load">Načíst mapu</button>
+        </div>
+    </div>
+</div>
 
-    <div class="grid-container" id="grid-container">
-        <table id="grid" class="table">
-
-        </table>
+<div id="editor-screen" class="screen hidden">
+    <div class="top-bar">
+        <button id="btn-back">Zpět do menu</button>
+        <div class="save-area">
+            <input type="text" id="input-name" placeholder="Název mapy">
+            <button id="btn-save">Uložit</button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="grid"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

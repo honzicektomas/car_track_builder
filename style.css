@@ -1,31 +1,77 @@
-button {
-    height: 30px;
-    width: 100px;
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    min-height: 100vh;
 }
 
-table {
-    color: black;
-    border-spacing: 1px;
+.screen {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls, .top-bar {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.load-area, .save-area {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+input, select {
+    padding: 8px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20,1fr);
+    width: 619px;
+    height: 619px;
+    margin: 0 auto;
+    border: 2px solid #333;
+    background-color: #ccc;
+    gap: 1px;
 
 }
 
 .cell {
-    margin: 0;
-    height: 30px;
-    width: 30px;
-    border: 1px;
-
+    background-color: #4caf50;
+    cursor: pointer;
+    transition: transform 150ms ease, box-shadow 150ms ease, background-color 200ms ease;
+    will-change: transform;
 }
 
-.grass {
-    background-color: green;
+.cell:hover {
+    opacity: 0.8;
+    transform: scale(120%);
 }
 
-.road {
-    background-color: gray;
+.cell.road {
+    background-color: #555;
 }
 
-.water {
-background-color: blue;
+.cell.water {
+    background-color: #2196f3;
 }
-
